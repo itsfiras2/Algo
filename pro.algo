@@ -1,0 +1,29 @@
+ALGORITHM workshopalgo
+VAR
+    sentence: STRING;
+    l: INTEGER;
+    w:INTEGER;
+    v:INTEGER;
+    i : INTEGER;
+    
+BEGIN
+    Read(sentence)
+    l := length(sentence)
+    w := 0;
+    v := 0;
+    for i FROM 1 TO l DO 
+    IF (sentence[i] = ' ' or sentence[i]= '.') THEN
+    w := w + 1  ;
+    END_IF
+    IF (sentence[i] = 'a' or sentence[i] = 'i' or sentence[i] = 'o' or sentence[i]='u' or sentence[i]='y' ) THEN
+        v := v + 1 ;
+    END_IF
+
+    
+    END_FOR
+    Write('The length of the sentence : ' , l);
+    Write('The number of words  :' , w);
+    Write('The number of vowels : ' , v);
+
+    
+END
